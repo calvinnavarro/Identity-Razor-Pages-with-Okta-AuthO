@@ -65,16 +65,7 @@ builder.Services.AddAuthentication(options =>
 
 });
 
-builder.Services.AddTransient<IEmailSender, MailKitEmailSender>();
-builder.Services.Configure<MailKitEmailSenderOptions>(options =>
-{
-    options.Host_Address = "smtp.ucsd.edu";
-    options.Host_Port = 587;
-    options.Host_Username = "hsrcwebmaster@ucsd.edu";
-    options.Host_Password = "6A!ae0da692a192a2869d2672eb11114";
-    options.Sender_EMail = "hsrcwebmaster@ucsd.edu";
-    options.Sender_Name = "LA iHOMS";
-});
+
 builder.Services.ConfigureApplicationCookie(options =>
 {
     // Cookie settings
